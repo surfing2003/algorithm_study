@@ -667,7 +667,7 @@
 # input = lambda : sys.stdin.readline().rstrip()
 
 # n = int(input())
-# b = [0]*10001
+# b = [0]*10001AZz
 # for _ in range(n):
 #     b[int(input())] += 1
 
@@ -675,3 +675,22 @@
 #     if b[i] != 0:
 #         for _ in range(b[i]):
 #             print(i)
+
+# 코드 분석
+# import collections, itertools, sys
+
+# next(sys.stdin)
+# a = collections.Counter(map(int, sys.stdin))
+# for i in range(10001): 
+#     sys.stdout.writelines(itertools.repeat(f"{i}\n", a[i]))
+
+# N = int(input())
+# a_list = list(map(int,input().split()))
+# b_list = sorted(a_list)
+# answer = []
+# for i in range(N):
+#     now = b_list.index(a_list[i])
+#     answer.append(now)
+#     b_list[now] = -1
+
+# print(*answer)
