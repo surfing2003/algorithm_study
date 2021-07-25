@@ -687,6 +687,29 @@
 
 # print(*answer)
 
+##  2981 풀이 수정 + 코드 리뷰
+from math import gcd, sqrt
+
+N = int(input())
+arr = sorted(list(int(input()) for _ in range(N)))
+interval = []
+answer = []
+
+for i in range(1,N):
+    interval.append(arr[i] - arr[i-1])
+
+prev = interval[0]
+for i in range(1,len(interval)):
+    prev = gcd(prev, interval[i])
+
+for i in range(2, int(sqrt(prev)) + 1):
+    if prev % i == 0:
+        answer.append(i)
+        answer.append(prev//i)
+answer.append(prev)
+ans = sorted(list(set(answer))) 
+print(*ans)
+
 ##  2981 참고
 from math import gcd
 from math import sqrt
