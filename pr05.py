@@ -737,6 +737,7 @@
 # print(*ans)
 
 
-r1, s = map(int,input().split())
-answer = 2*s - r1
-print(f'{answer}')
+# r1, s = map(int,input().split())
+# answer = 2*s - r1
+# print(f'{answer}')
+# print(2*s-r1)
