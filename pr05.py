@@ -747,3 +747,14 @@
 #     answer -= int(input())
 
 # print(answer)
+
+# N = int(input())
+# answer = list(input())
+# chk_len = len(answer)
+
+# for i in range(N-1):
+#     temp = list(input())
+#     for j in range(chk_len):
+#         if answer[j] != temp[j]:
+#             answer[j] = '?'
+# print(''.join(answer))
