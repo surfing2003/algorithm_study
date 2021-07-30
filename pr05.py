@@ -807,4 +807,19 @@
 #         int: [description]
 #     """    
 #     return a+b
-    
+
+# N, M = map(int,input().split())
+
+# arr = [list(map(int,input())) for _ in range(N)]
+# answer = 1
+
+# for k in range(1,min(N,M)):
+#     for i in range(N):
+#         for j in range(M):
+#             if i+k < N and j+k < M:
+#                 if all([arr[i][j] == arr[i+k][j],
+#                         arr[i][j] == arr[i][j+k],
+#                         arr[i][j] == arr[i+k][j+k]
+#                         ]):
+#                     answer = max(answer,(k+1)**2)
+# print(answer)
