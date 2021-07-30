@@ -823,3 +823,19 @@
 #                         ]):
 #                     answer = max(answer,(k+1)**2)
 # print(answer)
+
+# N, M = map(int,input().split())
+
+# arr = [list(map(int,input())) for _ in range(N)]
+
+# def find_answer():
+#     for k in range(min(N,M)-1,0,-1):
+#         for i in range(N-k):
+#             for j in range(M-k):
+#                 if all([arr[i][j] == arr[i+k][j],
+#                         arr[i][j] == arr[i][j+k],
+#                         arr[i][j] == arr[i+k][j+k]
+#                         ]):
+#                     return (k+1)**2
+#     return 1
+# print(find_answer())
