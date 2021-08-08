@@ -859,3 +859,5 @@
 #     answer += temp
 #     max_index = max(max_index,s+temp*L-1)
 # print(answer)
+
+# print(''.join([i for i in input() if i.isupper()]))
