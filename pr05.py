@@ -901,3 +901,15 @@
 # print(len(pos))
 # print(*pos)
 
+
+# 50점
+# N = int(input())
+# M = int(input())
+# s = input()
+# answer = 0
+# p = "I" + "OI" * N
+# lp = len(p)
+# for i in range(M-lp+1):
+#     if p == s[i:i+lp]:
+#         answer += 1
+# print(answer)
