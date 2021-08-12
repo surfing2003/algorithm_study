@@ -902,10 +902,24 @@
 # print(*pos)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 50점
 # N = int(input())
 # M = int(input())
 # s = input()
+
 # answer = 0
 # p = "I" + "OI" * N
 # lp = len(p)
@@ -927,7 +941,6 @@
 #             j += 1
 #             table[i] = j
 #     return table
-
 
 # def kmp(s, p):
 #     j = 0 
@@ -962,7 +975,6 @@
 # i = 1
 
 # while i < M - 1:
-#     print(i,count,answer,S[i-1],S[i],S[i+1])
 #     if S[i-1] == "I" and S[i] == "O" and S[i+1] == "I":
 #         count += 1
 #         if count == N:
@@ -972,5 +984,34 @@
 #     else:
 #         count = 0
 #     i += 1
-#     print(i,count,answer)
 # print(answer)
+
+# 내 코드
+# import sys
+# import re
+
+# input = lambda : sys.stdin.readline().rstrip()
+
+# s = input()
+# t_p = re.compile("<div title=\"(.*?)\">")
+# p_p = re.compile("<p>(.*?)</p>")
+
+# while True:
+#     if t_p.search(s) is not None:
+#         print("title :",t_p.search(s).group(1))
+#         s = s[t_p.search(s).end():]
+#         while True:
+#             temp = p_p.search(s).group(1)
+#             print(' '.join(re.sub("<(.*?)>|</(.*?)>","",temp).split()))
+#             s = s[p_p.search(s).end():]
+#             if t_p.search(s) is None:
+#                 if p_p.search(s) is None:
+#                     break
+#                 else:
+#                     continue
+#             elif p_p.search(s).start() < t_p.search(s).start():
+#                 continue
+#             else:
+#                 break
+#     else:
+#         break
