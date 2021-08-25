@@ -1220,6 +1220,73 @@
 #     print(p)
 #     print( "DA" if re.findall(p,input()) else "NE")
 
+# import sys
+# from copy import deepcopy
+# from itertools import combinations
+# input = lambda : sys.stdin.readline().rstrip()
+
+# N = int(input())
+
+# arr = [input().split() for _ in range(N)]
+# teachers = []
+# walls = []
+# for i in range(N):
+#     for j in range(N):
+#         if arr[i][j] == "T":
+#             teachers.append([i,j])
+#         elif arr[i][j] == "X":
+#             walls.append([i,j])
+
+# for w in combinations(walls,3):
+#     chk = True
+#     temp_arr = deepcopy(arr)
+#     for i,j in w:
+#         temp_arr[i][j] = "O"
+
+#     for x,y in teachers:
+#         nx, ny = x,y
+#         while nx > 0:
+#             nx -= 1
+#             if temp_arr[nx][ny] == "O":
+#                 break
+#             if temp_arr[nx][ny] == "S":
+#                 chk=False
+#                 break
+        
+#         nx, ny = x,y
+#         while nx < N-1:
+#             nx += 1
+#             if temp_arr[nx][ny] == "O":
+#                 break
+#             if temp_arr[nx][ny] == "S":
+#                 chk=False
+#                 break
+        
+#         nx, ny = x,y
+#         while ny > 0:
+#             ny -= 1
+#             if temp_arr[nx][ny] == "O":
+#                 break
+#             if temp_arr[nx][ny] == "S":
+#                 chk=False
+#                 break
+
+#         nx, ny = x,y
+#         while ny < N-1:
+#             ny += 1
+#             if temp_arr[nx][ny] == "O":
+#                 break
+#             if temp_arr[nx][ny] == "S":
+#                 chk=False
+#                 break
+
+#     if chk:
+#         print("YES")
+#         break
+# else:
+#     print("NO")
+
+
 ## today F7
 # import sys
 # input = lambda : sys.stdin.readline().rstrip()
@@ -1245,3 +1312,4 @@
 
 # dfs(1)
 # print(len(answer)-1)
+
