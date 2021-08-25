@@ -1185,6 +1185,7 @@
 # bfs_node(v)
 # print()
 
+###
 # from itertools import combinations
 
 # def max_n(arr):
@@ -1206,3 +1207,15 @@
 
 # print(max(answer))
 
+# import sys
+# import re
+# input = lambda : sys.stdin.readline().rstrip()
+
+# N = int(input())
+# p = "^"+'.*'.join(input().split('*'))+"$"
+
+# for _ in range(N):
+#     print(p)
+#     print( "DA" if re.findall(p,input()) else "NE")
+
+        
