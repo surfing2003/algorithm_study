@@ -1134,50 +1134,75 @@
 
 #####
 
-import queue
-import sys
-input = lambda : sys.stdin.readline().rstrip()
+# import queue
+# import sys
+# input = lambda : sys.stdin.readline().rstrip()
 
-n,m,v = map(int,input().split())
-node_graph = [list() for _ in range(n+1)]
+# n,m,v = map(int,input().split())
+# node_graph = [list() for _ in range(n+1)]
 
-for _ in range(m):
-    x, y = map(int,input().split())
-    node_graph[x].append(y)
-    node_graph[y].append(x)
-
-for x in node_graph:
-    x.sort()
+# for _ in range(m):
+#     x, y = map(int,input().split())
+#     node_graph[x].append(y)
+#     node_graph[y].append(x)
 
 # for x in node_graph:
-#     print(x)
+#     x.sort()
 
-# dfs_node
-chk = [False] * (n+1)
-def dfs_node(node):
-    chk[node] = True
-    print(node,end = " ")
-    for next in node_graph[node]:
-        if not chk[next]:
-            dfs_node(next)
+# # for x in node_graph:
+# #     print(x)
+
+# # dfs_node
+# # stack
+# chk = [False] * (n+1)
+
+# def dfs_node(node):
+#     chk[node] = True
+#     print(node,end = " ")
+#     for next in node_graph[node]:
+#         if not chk[next]:
+#             dfs_node(next)
     
-dfs_node(v)
-print()
+# dfs_node(v)
+# print()
 
-# bfs_node
-chk = [False] * (n+1)
-def bfs_node(start):
-    q = queue.Queue()
-    q.put(start)
-    chk[start] = True
+# # bfs_node
+# # deque
+# chk = [False] * (n+1)
+# def bfs_node(start):
+#     q = queue.Queue()
+#     q.put(start)
+#     chk[start] = True
 
-    while not q.empty():
-        now = q.get()
-        print(now,end = " ")
-        for next_n in node_graph[now]:
-            if not chk[next_n]:
-                chk[next_n] = True
-                q.put(next_n)
+#     while not q.empty():
+#         now = q.get()
+#         print(now,end = " ")
+#         for next_n in node_graph[now]:
+#             if not chk[next_n]:
+#                 chk[next_n] = True
+#                 q.put(next_n)
 
-bfs_node(v)
-print()
+# bfs_node(v)
+# print()
+
+# from itertools import combinations
+
+# def max_n(arr):
+#     max_1 = 0
+#     for i in combinations(arr,3):
+#         max_1 = max(sum(i)%10,max_1)
+#     return max_1
+
+# N = int(input())
+# temp = []
+# for _ in range(N):
+#     arr = list(map(int,input().split()))
+#     temp.append(max_n(arr))
+
+# answer = []
+# for i,v in enumerate(temp):
+#     if v == max(temp):
+#         answer.append(i+1)
+
+# print(max(answer))
+
